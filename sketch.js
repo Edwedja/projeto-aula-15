@@ -70,43 +70,24 @@ function draw() {
     }else if(jewelryG.isTouching(boy)) {
       jewelryG.destroyEach();
 
-       treasureCollection=+ 150;
-      // treasureCollection= 150;
-      // treasureCollection= treasureCollection - 150;
-      // treasureCollection= treasureCollection + 150;
+      // treasureCollection=+ 150;  // Ju desse jeito aqui, toda vez que o ladrão toca no colar, ele perde pontuação
+       treasureCollection= treasureCollection + 150;  // O correto seria essa linha! 
       
     }else{
       if(swordGroup.isTouching(boy)) {
         gameState=END;
         
-        // boy.addAnimation(endImg);
-        // boy.addAnimation("SahilRunning",endImg);
-         boy.addAnimation("SahilRunning");
-        // boy.addAnimation(SahilRunning,endImg);
+         boy.addAnimation("SahilRunning",endImg);  // deve ser colocado o nome da variável que recebeu a animação! 
+         //boy.addAnimation("SahilRunning");        // quando o ladrão toca as espadas, ele deve mudar para a imagem de end!
 
         boy.x=200;
         boy.y=300;
         boy.scale=0.6;
         
-        // cashG.destroyEach;
-        // diamondsG.destroyEach;
-        // jewelryG.destroyEach;
-        // swordGroup.destroyEach;
-
-        // cashG.destroy();
-        // diamondsG.destroy();
-        // jewelryG.destroy();
-        // swordGroup.destroy();
-        
          cashG.destroyEach();
          diamondsG.destroyEach();
          jewelryG.destroyEach();
          swordGroup.destroyEach();
-        
-        // cashGdestroyEach();
-        // diamondsGdestroyEach();
-        // jewelryGdestroyEach();
-        // swordGroupdestroyEach();
         
         cashG.setVelocityYEach(0);
         diamondsG.setVelocityYEach(0);
